@@ -187,3 +187,24 @@ int main()
 
 *******************************************************************************
 
+//Problem 10
+//SmartPhone Unlock
+//Try to unlock the phone until we get the correct password
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int password;
+    do{
+        cout << "Enter Password:-";
+        cin >> password;
+    } while(password != 12345);
+    cout << "Phonr Unlocked!...";
+    
+    return 0;
+}
+
+*******************************************************************************
+
