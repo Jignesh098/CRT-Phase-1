@@ -59,7 +59,7 @@ int main()
 
 
 //Problem-4
-//Print reverse right angle triangle using pattern
+//Print mirror image of right angle triangle using pattern
 
 #include <iostream>
 using namespace std;
