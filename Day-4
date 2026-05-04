@@ -79,3 +79,26 @@ int main()
 
     return 0;
 }
+
+
+
+//Problem-5
+//Print rectangle using pattern
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row, col;
+    cin >> row;
+    cin >> col;
+    
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j<=col; j++){
+            cout << "* ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
