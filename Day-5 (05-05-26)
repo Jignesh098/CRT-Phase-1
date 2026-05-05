@@ -42,3 +42,111 @@ int main(){
     cout<< areaOfR;
     
 }
+
+
+
+//Problem-4
+//types of functions
+//4.1 no argument and no return type
+
+#include<iostream>
+using namespace std;
+
+void DoorBell(){
+    cout<< "Ting Tong...";
+    
+}
+
+int main(){
+    DoorBell();
+    return 0;
+}
+
+
+
+//4.2 argument and no return type
+
+#include<iostream>
+using namespace std;
+
+void sendText(string message){
+    cout<< message;
+    
+}
+
+int main(){
+    sendText("BJP wons...");
+    return 0;
+}
+
+
+
+//4.3 no argument and return type
+
+#include<iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+    
+}
+
+int main(){
+    cout<<ticketNumber();
+    return 0;
+}
+
+
+//4.4 argument and return type
+
+#include<iostream>
+using namespace std;
+
+int currencyConversion(int amountInUSD){
+    return amountInUSD/100;
+    
+}
+
+int main(){
+    cout<<currencyConversion(1000);
+    return 0;
+}
+
+
+//Problem-6
+//Pointers
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int age = 24;
+    int *ptr = &age;
+    
+    cout << age << "\n";
+    cout << ptr << "\n";
+    cout << *ptr << "\n";
+    
+    *ptr = 28;
+    cout << *ptr;
+}
+
+
+
+//Problem-7
+//Pointers sum
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a , b;
+    cin >> a;
+    cin >> b;
+    
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    int sum = *ptr1 + *ptr2;
+    
+    cout << sum;
+}
