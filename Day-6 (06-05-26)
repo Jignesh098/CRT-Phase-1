@@ -113,3 +113,32 @@ int main()
     setTemprature("TURBO"); // temprature to 18
     
 }
+
+
+
+//Practice Problem-6
+//Classes and Objects
+
+#include <iostream>
+using namespace std;
+
+class Student {
+    public:
+    string name;
+    int age;
+
+void introduce(){
+    cout << "Hii there, this person name is " << name << " and his age is " << age <<"\n";
+}
+};
+
+int main()
+{
+    Student s1, s2;
+    s1.name = "Pinda";
+    s1.age = 28;
+    s2.name = "Jassi";
+    s2.age = 29;
+    s1.introduce();
+    s2.introduce();
+}
