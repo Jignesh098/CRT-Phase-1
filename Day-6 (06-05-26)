@@ -39,3 +39,77 @@ int main()
     cout << area(10, 3);
     
 }
+
+
+//Problem-3
+//Call by Value -- Photocopy
+//Call by reference -- Original copy (address)
+
+#include <iostream>
+using namespace std;
+
+void updatebyValue(int a){
+    a = 500;
+}
+void updatebyRefrence(int &a){
+    a = 500;
+}
+int main()
+{
+    int original = 100;
+    cout << original << "\n";
+    updatebyValue(original);
+    cout << original <<"\n";
+    updatebyRefrence(original);
+    cout << original;
+    
+}
+
+
+//Practice Problems
+//Coffee Shop
+
+#include <iostream>
+using namespace std;
+int coffee(int a, int b =60){
+    return a*b;
+}
+int main()
+{
+    int n;
+    cout << "Number of Coffees: ";
+    cin >> n;
+    
+    int ans = coffee(n);
+    cout<<"total price of " << n << " Coffee are: " << ans;
+}
+
+
+
+//Practice Problem-5
+//Smart AC Remote // Function Overloading //Default Arguments
+
+#include <iostream>
+using namespace std;
+
+void setTemprature(int temp = 22){
+    cout <<"temprature set to " << temp << "'C" << "\n";
+}
+void setTemprature(double temp){
+    cout <<"temprature set to " << temp << "'C" << "\n";
+}
+void setTemprature(string mode){
+    if(mode == "ECO"){
+        cout << "temprature set to 24'C" << "\n";
+    } else if(mode=="TURBO"){
+        cout << "Temperature set to 18'C" << "\n";
+    }
+}
+int main()
+{
+    setTemprature(); // default value -- 22
+    setTemprature(20.5); // manually setting the temprature 
+    setTemprature("ECO"); // temprature to 24
+    setTemprature("TURBO"); // temprature to 18
+    
+}
