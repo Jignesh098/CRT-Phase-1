@@ -143,3 +143,9 @@ int main()
   obj1.setBalance(5000);
   cout << obj1.getbalance();
 }
+
+// Problem-4
+// Abtraction means hiding the implementation and showing only the neccessary/essential
+// features to the user
+// abstract class -- class cannot be intialized and it is formed using the abstract keyword
+// abstract method -- there is no intialization of the abstract method
