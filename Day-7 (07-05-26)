@@ -1,0 +1,50 @@
+//Problem-1 
+//Access Specifier
+//7.2 -- Public
+
+#include <iostream>
+using namespace std;
+
+class BandAccount {
+    
+private:
+    int balance = 5000;
+    
+public:
+void showBalance() {
+    cout << "Balance in your account is: " << balance;
+    }
+};
+
+int main()
+{
+  BandAccount myaccount;
+  myaccount.showBalance();
+}
+
+
+
+//Problem-1 
+//Access Specifier
+//7.3 -- Protected
+
+#include <iostream>
+using namespace std;
+
+class Parent {
+protected:
+    int sercretCode = 1234;
+    
+};
+class child : public Parent{
+public:
+    void accessOfSecretCode() {
+        cout << "sercretCode of the locker is " << sercretCode;
+    }
+};
+
+int main()
+{
+  child obj1;
+  obj1.accessOfSecretCode();
+}
