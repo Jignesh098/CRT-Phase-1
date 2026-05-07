@@ -77,3 +77,34 @@ int main()
   wifiConnection obj1;
   obj1.showDetails();
 }
+
+
+//Problem-2 
+//Constructors
+//Type-2 Parameterized 
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int id;
+    
+    //Constructor
+    
+    Student(string studentName, int studentID) {
+        name = studentName;
+        id = studentID;
+    }
+    
+public:    
+void displayDetails() {
+    cout << name << " " << id;
+}
+};
+int main()
+{
+  Student std1("Pinda" , 101);
+  std1.displayDetails();
+}
