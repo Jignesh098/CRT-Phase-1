@@ -48,3 +48,32 @@ int main()
   child obj1;
   obj1.accessOfSecretCode();
 }
+
+
+//Problem-2 
+//Constructors
+//Type-1 default
+
+#include <iostream>
+using namespace std;
+
+class wifiConnection {
+public:
+    string networkName;
+    string password;
+    
+    wifiConnection(){
+        networkName = "ACTFibre";
+        password = "BJP wons";
+    }
+    
+public:    
+void showDetails() {
+    cout << "Network name is " << networkName << " and its password is " << password;
+}
+};
+int main()
+{
+  wifiConnection obj1;
+  obj1.showDetails();
+}
