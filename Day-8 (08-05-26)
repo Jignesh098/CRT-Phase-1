@@ -1,5 +1,6 @@
 //Problem-1
 //Inheritance
+//Single Inheritance
 #include <iostream>
 using namespace std;
 
