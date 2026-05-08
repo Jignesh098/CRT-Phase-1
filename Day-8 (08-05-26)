@@ -51,9 +51,203 @@ public:
     }
 };
 
+class Bike : public Vehicle {
+public:
+    void motorcycle() {
+        cout << "Bike is running" << "\n";
+    }
+};
+
 int main() {
     speedoMeter obj1;
     obj1.speed();
-    obj1.drive();
     obj1.start();
+    Bike obj2;
+    obj2.motorcycle();
+    obj1.drive();
+}obj1.start();
+}
+
+
+
+//Problem-1.3
+//Heirarical Inheritance
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    void start() {
+        cout << "Vehicle Starts " << "\n";
+    }
+};
+
+class Bike : public Vehicle {
+public:
+    void drive() {
+        cout << "Bike is running" << "\n";
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void chalna() {
+        cout << "Car is khisking" << "\n";
+    }
+};
+
+
+int main() {
+    Car obj1;
+    Bike obj2;
+    
+    obj1.chalna();
+    obj1.start();
+    
+    obj2.start();
+    obj2.drive();
+}
+
+
+
+//Problem-1.4
+//Multiple Inheritance
+#include <iostream>
+using namespace std;
+
+class Parent1 {
+public:
+    void giveMeMoneyMaa(){
+        cout << "mummy paise dedo" << "\n";
+    }
+};
+
+class Parent2 {
+public:
+    void giveMeMoneyPaa(){
+        cout << "papa paise dedo mujhe boht sare" << "\n";
+    }
+};
+
+class child : public Parent1, public Parent2 {
+    //NO logic
+};
+
+int main() {
+    child obj1;
+    obj1.giveMeMoneyMaa();
+    obj1.giveMeMoneyPaa();
+}
+
+
+// Problem-1.5
+// Hybrid Inheritance
+
+#include <iostream>
+using namespace std;
+
+class A {
+public: 
+    void print(){
+        cout << "BJP Wons";
+    }
+};
+class B : virtual public A {
+    // NO LOGIC
+};
+
+class C : virtual public A {
+    // NO LOGIC
+};
+
+class D : public B, public C {
+    // NO LOGIC
+};
+
+int main() {
+    D obj1;
+    obj1.print();
+}
+
+
+//Polymorphism
+//It means one name but many forms
+//same function behaves differently depending upon the type of the object it called
+//two types
+// 1) Compile time Polymorphism -- Function Overloading -- static
+// resolved at compile time
+//Function overloads -- same function name but different parameters
+// faster execution
+// 2) Run time Polymorphism -- Function overriding -- Dynamic 
+// resolvedat run time 
+//Function run time-- same function name , same namespace, but different class
+// uses a virtual keyword in the base class
+// acheiving this through the concept of Inheritance
+
+// Problem-2
+// Types of Polymorphism -- 2.1
+// Function Overloading
+
+#include <iostream>
+using namespace std;
+
+class Math {
+public:
+    void add(int a,int b,int c){
+        cout << a+b+c << "\n";
+    }
+    
+public:
+    void add(int a,int b){
+        cout << a+b << "\n";
+    }
+    
+public:
+    void add(int a,int b,int c,int d){
+        cout << a+b+c+d << "\n";
+    }
+};
+
+int main() {
+    Math m;
+    m.add(6,9,6);
+    m.add(6,9);
+    m.add(6,9,6,9);
+}
+
+
+// Types of Polymorphism -- 2.2
+// Function Overriding
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual void sound(){
+        cout << "Janwarr hauuuuuuu" << "\n";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound(){
+        cout << "Dog Bhonkaa" << "\n";
+    }
+};
+
+class Cat {
+public:
+    void sound(){
+        cout << "Billii meowww" <<"\n";
+    }
+};
+
+int main() {
+    Animal a;
+    Dog d;
+    Cat c;
+    a.sound();
+    d.sound();
+    c.sound();
 }
