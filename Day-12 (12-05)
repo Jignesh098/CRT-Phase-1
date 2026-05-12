@@ -1,0 +1,32 @@
+
+//Fibonacci Series using Recursion
+
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+    
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int terms;
+
+    cout << "Enter the number of terms for the Fibonacci series: ";
+    cin >> terms;
+    
+    if (terms <= 0) {
+        cout << "Please enter a positive integer." << endl;
+    } else {
+        cout << "Fibonacci Series: ";
+        for (int i = 0; i < terms; i++) {
+            cout << fibonacci(i) << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
